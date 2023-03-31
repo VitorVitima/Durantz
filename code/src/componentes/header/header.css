@@ -1,0 +1,28 @@
+@import url('../cores.css');
+header{
+    background-color: var(--cor1);
+    width: 100vw;
+    height: 90px;
+
+    display: flex;
+    justify-content: space-between;
+}
+header  h1{
+    margin: 0px;
+}
+header > nav{
+    background-color: red;
+    padding: 0px 20px;
+
+    display: flex;
+    align-items: center;
+    
+}
+header > nav > div{
+    width: fit-content;
+    height: fit-content;
+    padding: 10px 20px;
+    background-color: var(--cor3_2);
+}
+
+

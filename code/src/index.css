@@ -1,0 +1,6 @@
+@import url('./componentes/cores.css');
+body{
+    background-color: var(--cor3_2);
+    margin: 0px;
+    box-sizing: border-box;
+}
