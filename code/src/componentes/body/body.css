@@ -1,0 +1,60 @@
+main > div#promocao{
+    overflow: hidden;
+}
+main > div#promocao > div.produtosCarrossel > div#carrosselFun{
+    display: inline-flex;
+    gap: 10px;
+}
+main > div#promocao > div.produtosCarrossel > div#carrosselFun > div{
+    width: 20vw;
+    height: 170px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition-duration: 0.3s;
+    
+}
+main > div#promocao > div.produtosCarrossel > div#carrosselFun > div > div{
+    background-color: red;
+    width: 19vw;
+    height: 160px;
+
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+    transition-duration: 0.3s;
+}
+main > div#promocao > div.produtosCarrossel > div#carrosselFun > div:hover > div{
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.274);
+    width: 20vw;
+    height: 170px;
+}
+main > div#promocao > div.produtosCarrossel > div#carrosselFun > div:nth-child(1){
+    margin-left: calc(-20vw - 17px);
+}
+main > div#promocao > div.produtosCarrossel > div.promocaoButtons{
+    background-color: rgba(255, 0, 0, 0);
+    color: rgba(255, 0, 0, 0);
+    height: 160px;
+    
+    display: flex;
+    align-items: center;
+
+    transform: translate(0px, -50%);
+    position: absolute;
+    cursor: pointer;
+    top: 242px;
+    transition-duration: 0.3s;
+}
+main > div#promocao > div.produtosCarrossel > div.promocaoButtons:hover{
+    background-color: rgba(0, 0, 0, 0.404);
+    color: var(--cor5);
+    transition-duration: 0.3s;
+}
+main > div#promocao > div.produtosCarrossel > div.promocaoButtons:nth-child(1){
+    left: 98.5vw;
+}
