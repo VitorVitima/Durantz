@@ -42,6 +42,7 @@ function Home(){
                 <div className='promocaoProdutosCarrossel' id={`carrosselpro${posi}`}>
                     <div className='promocaoProdutosCarrossel2'>
                         <img
+                          className="imgCarrossel"
                             src={images[posi]}                      
                       >
                             
@@ -56,6 +57,7 @@ function Home(){
                 <div className='banners' id={`banner${banner[posi]}`}>
                     <div className='conteinerImageBanner'>
                         <img
+                           
                             src={eval(`sbanner${et}`)}
                         >
                         </img>
