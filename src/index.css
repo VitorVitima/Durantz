@@ -3,3 +3,6 @@ body{
     background-color: var(--cor3_2);
     margin: 0px;
 }
+html{
+    overflow-x: hidden;
+}
