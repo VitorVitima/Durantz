@@ -234,3 +234,30 @@ main div#banners div#botaoBanner1 div{
 main div#banners div#botaoBanner2 div{
     margin-left: -20px;
 }
+
+main div.promocaoProdutosCarrossel{
+	display: flex;
+	align-items: center;
+    	justify-content: center;
+
+}
+main div.promocaoProdutosCarrossel img.imgCarrossel{
+	width: 50%;	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
