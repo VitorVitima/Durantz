@@ -1,22 +1,43 @@
 import Cart from './cart'
 import Globais from '../globais'
-
 import {useState, useEffect} from 'react'
+import { Link } from 'react-router-dom'
+
+import logoGif from "../../images/DURANTZ.gif"
+import logoPng from "../../images/4.png"
+
+
 import './header.css'
 function Header(){
-    const [itens, setItens] = useState(0)
-    const [preco, setPreco] = useState('0,00')
+    const [itens, setItens] = useState(Globais.itens)
+    const [preco, setPreco] = useState(Globais.preco)
+    const [logo, setLogo] = useState(0);
 
     const [pes, setPes] = useState(Globais.pesquisa)
     useEffect(()=>{
         setPes(Globais.pesquisa)
     })
+    setTimeout(()=>{
+        setLogo(1)
+    }, 5000)
+    function switchLogo(){
+        if(logo){
+            return logoPng
+        } else {
+            return logoGif
+        }
+    }
     return(
         <header>
+            <div id="topo">
+
             <div id='logo'>
-                <h1>
-                    LOGO!!!
-                </h1>
+                <Link to="/">
+                    <img
+                        src={switchLogo()}
+                        id='logo'
+                    ></img>                
+                </Link>
             </div>
             <div id='pes'>
                 <div id='pesConteiner'>
@@ -49,7 +70,29 @@ function Header(){
                     </Cart>
                 </div>
             </nav>
-            
+            </div>
+            <div id='baixo'>
+                <div className='boxs'>
+                    <Link to='bebidas'>
+                        <span>BEBIDAS</span>
+                    </Link>
+                </div>
+                <div className='boxs'>
+                    <Link to='marcas'>
+                        <span>MARCAS</span>
+                    </Link>
+                </div>
+                <div className='boxs'>
+                    <Link to='kits'>
+                        <span>KITS</span>
+                    </Link>
+                </div>
+                <div className='boxs'>
+                    <Link to='drinks'>
+                        <span>DRINKS</span>
+                    </Link>
+                </div>
+            </div>
         </header>
     )
 }

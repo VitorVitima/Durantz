@@ -2,20 +2,39 @@
 header{
     background-color: var(--cor1);
     width: 100vw;
-    height: 90px;
+    min-height: 90px;
 
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
 }
 header  h1{
     margin: 0px;
 }
-header > div{
+header > div#topo{
+    width: 100vw;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+}
+header > div#topo > div{
+    padding-top: 10px;
     display: flex;
     align-items: center;
     height: 100%;
 }
-header > div#pes > div#pesConteiner{
+header > div#topo > div#pes{
+    padding-top: 0px;
+}
+header > div > div#logo{
+    align-items: center;
+    margin-top: 20px;
+    height: 70%;
+}
+header > div > div#logo > img#logo{
+    width: 300px;   
+}
+header > div > div#pes > div#pesConteiner{
     background-color: var(--cor3_2);
     width: 30vw;
     max-width: 400px;
@@ -26,10 +45,10 @@ header > div#pes > div#pesConteiner{
 
     border-radius: 5px;
 }
-header > div#pes > div#pesConteiner > div#pesSvg{
+header > div > div#pes > div#pesConteiner > div#pesSvg{
     height: 16px;
 }
-header > div#pes > div#pesConteiner > input{
+header > div > div#pes > div#pesConteiner > input{
     background-color: var(--cor3_2);
     width: 80%;
     border: none;
@@ -38,14 +57,16 @@ header > div#pes > div#pesConteiner > input{
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
 }
-header > nav{
+header > div > nav{
     padding: 0px 20px;
 
     display: flex;
     align-items: center;
+    height: 70%;
+    margin-top: 27px;
     
 }
-header > nav > div{
+header > div > nav > div{
     width: fit-content;
     height: fit-content;
     padding: 10px 20px;
@@ -54,7 +75,28 @@ header > nav > div{
     justify-content: center;
     align-items: center;
 }
-header > nav > div > div#Svg{
+header > div > nav > div > div#Svg{
     height: 20px;
     padding: 0px 10px 0px 0px;
+}
+
+
+header > div#baixo{
+    width: 100vw;
+    max-width: 1500px;
+    margin: auto;
+    display: flex;
+    justify-content: space-evenly;
+    padding-bottom: 15px;
+}
+header > div#baixo > div.boxs > a{
+    text-decoration: none;
+    color: black;
+}
+header > div#baixo > div.boxs > a > span{
+    cursor: pointer;
+}
+header > div#baixo > div.boxs > a > span:hover{
+    color: yellow;
+    transition-duration: 0.2s;
 }
