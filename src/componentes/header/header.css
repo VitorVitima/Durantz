@@ -66,6 +66,10 @@ header > div > nav{
     margin-top: 27px;
     
 }
+header > div > nav a{
+    text-decoration: none;
+    color: black;
+}
 header > div > nav > div{
     width: fit-content;
     height: fit-content;

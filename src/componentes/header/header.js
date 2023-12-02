@@ -52,7 +52,9 @@ function Header(){
             <nav>
                 <div id='login'>
                     <div>
-                        Login
+                        <Link to='/login'>
+                            Login
+                        </Link>
                     </div>
                 </div>
                 <div id='cart' >

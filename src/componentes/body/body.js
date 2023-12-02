@@ -1,4 +1,4 @@
-import { Routes, Route } from 'react-router-dom'
+import { Routes, Route, Router } from 'react-router-dom'
 import './body.css'
 
 import Home from './home'
@@ -6,6 +6,7 @@ import Bebidas from './bebidas/bebidas'
 import Marcas from './marcas/marcas'
 import Drinks from './drinks/drinks'
 import Kits from './kits/kits'
+import Login from './login'
 
 function Body(){
     
@@ -18,6 +19,7 @@ function Body(){
                 <Route path='marcas' element={<Marcas></Marcas>}></Route>
                 <Route path='kits' element={<Kits></Kits>}></Route>
                 <Route path='drinks' element={<Drinks></Drinks>}></Route>
+                <Route path='login' element={<Login></Login>}></Route>
             </Routes>
         </main>
     )
