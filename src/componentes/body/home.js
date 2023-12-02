@@ -19,6 +19,18 @@ function Home(){
     const sbanner5 = banner5;
 
     const [autoBanner, setAutoBanner] = useState(0);
+
+    const images = ['https://media.danmurphys.com.au/dmo/product/908839-1.png?impolicy=PROD_LG',
+                    'https://www.sucos.com/fileadmin/_processed_/0/f/csm_SDB_VELHO_BARREIRO_Cachaca_Silver_700ml_850_e81030d8da.png',
+                    'https://www.bartendme.co/wp-content/uploads/2020/11/cachaza-51-ron-brasil.png',
+                    'https://ecommercewebblob0.blob.core.windows.net/auchan/cache/product_large/product/7207358/02_4193481_front_1607759963.png',
+                    'https://d25ja3g8yr6mfa.cloudfront.net/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/j/o/johnnie_walker_red_label_caja.png',
+                    'https://d50xhnwqnrbqk.cloudfront.net/images/products/large/WHISKY-BUCHANANS-DELUXE-750-ML.png',
+                    'https://cdn.irmaospatrocinio.com.br/img/p/1/6/8/5/8/8/168588-thickbox_default.jpg',
+                    'https://i.pinimg.com/originals/d8/6f/da/d86fda77c35f943bd96b6d43a0a46844.png',
+                    'https://www.covylsa.com/WebRoot/StoreES/Shops/ea2537/5616/389A/078A/A657/F3B1/52DF/D07D/DB62/heinken_lata_ml.png'
+]
+
     
     useEffect(()=>{
         setBanner(Globais.banner)
@@ -29,9 +41,11 @@ function Home(){
             return (
                 <div className='promocaoProdutosCarrossel' id={`carrosselpro${posi}`}>
                     <div className='promocaoProdutosCarrossel2'>
-                        <span>
-                            {et}
-                        </span>
+                        <img
+                            src={images[posi]}                      
+                      >
+                            
+                        </img>
                     </div>
                 </div>
             )
