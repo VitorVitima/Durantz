@@ -166,15 +166,15 @@ main div#banners div.botoesBanner{
 
     width: 100px;
     height: 60px;
+    cursor: pointer;
 }
 main div#banners div#botaoBanner1{
-    right: 0px;
+    margin-left: calc(100vw - 100px);
     rotate: 90deg;
 }
 main div#banners div#botaoBanner2{
-    right: calc(95vw);
+    margin-left: -1.5vw;
     rotate: -90deg;
-    margin-top: 50px;
 }
 main div#banners div.botoesBanner > div{
 	width: 30px;
@@ -215,17 +215,20 @@ main div#banners div.botoesBanner > div{
 		transition:.2s ease;
 	}
 	
-	&:hover::after {
+	
+	
+}
+main div#banners div.botoesBanner:hover > div{
+    &::after {
 		transform: rotate(45deg);
 		border-color: orange;
 		height: 120%;
 	}
-	&:hover::before {
+	&::before {
 		border-color: orange;
 		transform: scale(.8);
 		
 	}
-	
 }
 main div#banners div#botaoBanner1 div{
     margin-left: -20px;

@@ -102,14 +102,14 @@ function Home(){
     return(
         <>
             <div id='banners'>
-                <div className="botoesBanner" id="botaoBanner1">
-                    <div onClick={()=>carrosselMoveRight(0)} ></div>
+                <div onClick={()=>carrosselMoveRight(0)} className="botoesBanner" id="botaoBanner1">
+                    <div  ></div>
                 </div>
                 <div id="allBanners">
                     {bannerFun(banner)}
                 </div>
-                <div className="botoesBanner" id="botaoBanner2">
-                    <div onClick={()=>carrosselMoveLeft(0)}></div>
+                <div onClick={()=>carrosselMoveLeft(0)} className="botoesBanner" id="botaoBanner2">
+                    <div ></div>
                 </div>
             </div>
             <div id='promocao'>

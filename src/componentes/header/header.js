@@ -3,41 +3,24 @@ import Globais from '../globais'
 import {useState, useEffect} from 'react'
 import { Link } from 'react-router-dom'
 
-import logoGif from "../../images/DURANTZ.gif"
-import logoPng from "../../images/4.png"
-
+import Logo from './logo'
 
 import './header.css'
 function Header(){
     const [itens, setItens] = useState(Globais.itens)
     const [preco, setPreco] = useState(Globais.preco)
-    const [logo, setLogo] = useState(0);
 
     const [pes, setPes] = useState(Globais.pesquisa)
     useEffect(()=>{
         setPes(Globais.pesquisa)
     })
-    setTimeout(()=>{
-        setLogo(1)
-    }, 5000)
-    function switchLogo(){
-        if(logo){
-            return logoPng
-        } else {
-            return logoGif
-        }
-    }
+    
     return(
         <header>
             <div id="topo">
 
             <div id='logo'>
-                <Link to="/">
-                    <img
-                        src={switchLogo()}
-                        id='logo'
-                    ></img>                
-                </Link>
+                <Logo></Logo>
             </div>
             <div id='pes'>
                 <div id='pesConteiner'>

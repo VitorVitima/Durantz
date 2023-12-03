@@ -1,5 +1,8 @@
-import { Routes, Route, Router } from 'react-router-dom'
+import { Routes, Route } from 'react-router-dom'
 import './body.css'
+
+import Header from "../header/header"
+import Footer from "../footer/footer";
 
 import Home from './home'
 import Bebidas from './bebidas/bebidas'
@@ -13,6 +16,7 @@ function Body(){
     
     return(
         <main>
+            <Header></Header>
             <Routes>
                 <Route path='/' element={<Home></Home>}></Route>
                 <Route path='bebidas' element={<Bebidas></Bebidas>}></Route>
@@ -21,6 +25,7 @@ function Body(){
                 <Route path='drinks' element={<Drinks></Drinks>}></Route>
                 <Route path='login' element={<Login></Login>}></Route>
             </Routes>
+            <Footer></Footer>
         </main>
     )
 }
