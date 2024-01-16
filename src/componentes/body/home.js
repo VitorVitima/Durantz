@@ -8,6 +8,8 @@ import banner3 from "../../images/banners/banner 6.webp"
 import banner4 from "../../images/banners/banner 7.webp"
 import banner5 from "../../images/banners/banner 8.webp"
 
+import Receba from "./receba"
+
 function Home(){
     const [pc, setPc] = useState()
     const [banner, setBanner] = useState()
@@ -126,6 +128,7 @@ function Home(){
                         </div>
                     </div>
             </div>
+            <Receba></Receba>
         </>
     )
 }

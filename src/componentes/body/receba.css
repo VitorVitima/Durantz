@@ -1,0 +1,129 @@
+div#receba{
+    width: 100vw;
+    height: 400px;
+
+    overflow: hidden;
+    background-color: yellow;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+div#receba div#imgReceba{
+    background-image: url('https://s2-oglobo.glbimg.com/xU7RbT1f_zTYMeqC5GXHmWJdur8=/0x0:3840x3073/888x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_da025474c0c44edd99332dddb09cabe8/internal_photos/bs/2023/m/2/Ua0uLRSdyqPjYZ0zsojQ/cerveja-light-fresca-na-caneca.jpg');
+    background-position: center center;
+    width: 400px;
+    height: 100%;
+
+    border-radius: 250px 500px 250px 500px;
+    padding: 20px 10px 30px 100px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+div#receba div#formReceba{
+    width: 500px;
+    height: 100%;
+    background-color: pink;
+}
+
+div#receba div#formReceba form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    flex-direction: column;
+    gap: 10px;
+}
+div#receba div#formReceba form input{
+    width: 310px;
+    height: 35px;
+    outline: none;
+    padding: 15px 10px 3px 10px;
+    border-radius: 10px;
+    border: 2px solid rgba(0, 0, 0, 0);
+    transition-duration: 0.3s;
+}
+div#receba div#formReceba form div:nth-child(2) input{
+    width: calc(300px - 60px);
+}
+div#receba div#formReceba form div:nth-child(2){
+    display: flex;
+    gap: 10px;
+}
+div#receba div#formReceba form div:nth-child(2) div#button{
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+    background-color: red;
+}
+div#receba div#formReceba form div:nth-child(2) div#button div{
+    div.arrow {
+        width: 6vmin;
+        height: 6vmin;
+        box-sizing: border-box;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: rotate(-45deg);
+        
+        &::before {
+            content: '';
+            width: 100%;
+            height: 100%;
+            border-width: .8vmin .8vmin 0 0;
+            border-style: solid;
+            border-color: #fafafa;
+            transition: .2s ease;
+            display: block;
+            transform-origin: 100% 0;
+        }
+    
+        
+        &:after {
+            content: '';
+            float: left;
+            position: relative;
+            top: -100%;
+            width: 100%;
+            height: 100%;
+            border-width: 0 .8vmin 0 0;
+            border-style: solid;
+            border-color: #fafafa;
+            transform-origin: 100% 0;
+            transition:.2s ease;
+        }
+        
+        &:hover::after {
+            transform: rotate(45deg);
+            border-color: orange;
+            height: 120%;
+        }
+        &:hover::before {
+            border-color: orange;
+            transform: scale(.8);
+            
+        }
+        
+    }
+}
+div#receba div#formReceba form input:focus{
+    border-color: yellow;
+}
+div#receba div#formReceba form > div > label{
+    position: absolute;
+    padding: 20px 0px 0px 10px;
+    transition-duration: 0.3s;
+    color: #0000006c
+}
+div#receba div#formReceba form div:has([type="text"]:focus) label{
+    padding-top: 9px;
+    color: #00000027;
+}
+div#receba div#formReceba span{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
