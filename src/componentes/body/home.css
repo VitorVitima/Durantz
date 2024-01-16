@@ -56,65 +56,67 @@ main > div#promocao > div.produtosCarrossel > div.promocaoButtons{
 
     cursor: pointer;
     transition-duration: 0.3s;
-}
-main > div#promocao > div.produtosCarrossel > div.promocaoButtons:hover{
-    color: var(--cor5);
-    transition-duration: 0.3s;
-}
-main > div#promocao > div.produtosCarrossel > div.promocaoButtons:nth-child(1){
-    left: calc(100vw - 65px);
-}
-main > div#promocao > div.produtosCarrossel > div.promocaoButtons > div{
-    width: 30px;
-	height: 30px;
-	box-sizing: border-box;
-	position: absolute;
-	left: 30%;
-	top: 50%;
-	transform: rotate(-135deg);
+
+    &:hover{
+        color: var(--cor5);
+        transition-duration: 0.3s;
+    }
+    &:nth-child(1){
+        left: calc(100vw - 65px);
+    }
+
+    & > div{
+        width: 30px;
+    	height: 30px;
+	    box-sizing: border-box;
+    	position: absolute;
+	    left: 30%;
+    	top: 50%;
+	    transform: rotate(-135deg);
     
-    cursor: pointer;
+        cursor: pointer;
 
 
-	&::before {
-		content: '';
-		width: 100%;
-		height: 100%;
-		border-width: .8vmin .8vmin 0 0;
-		border-style: solid;
-		border-color: #fafafa00;
-		transition: .2s ease;
-		display: block;
-		transform-origin: 100% 0;
-	}
+	    &::before {
+		    content: '';
+    		width: 100%;
+	    	height: 100%;
+		    border-width: .8vmin .8vmin 0 0;
+    		border-style: solid;
+	    	border-color: #fafafa00;
+		    transition: .2s ease;
+    		display: block;
+	    	transform-origin: 100% 0;
+	    }
 
 	
-	&:after {
-		content: '';
-		float: left;
-		position: relative;
-		top: -105%;
-		width: 100%;
-		height: 100%;
-		border-width: 0 .8vmin 0 0;
-		border-style: solid;
-		border-color: #fafafa00;
-		transform-origin: 100% 0;
-		transition:.2s ease;
-	}
-}
-main > div#promocao > div.produtosCarrossel > div.promocaoButtons:nth-child(1) > div{
-	transform: rotate(45deg);
-    left: 3%;
-}
-main > div#promocao > div.produtosCarrossel > div.promocaoButtons:hover > div::after{
+	    &:after {
+    		content: '';
+	    	float: left;
+		    position: relative;
+    		top: -105%;
+	    	width: 100%;
+		    height: 100%;
+    		border-width: 0 .8vmin 0 0;
+	    	border-style: solid;
+		    border-color: #fafafa00;
+    		transform-origin: 100% 0;
+	    	transition:.2s ease;
+	    }
+    }
+    &:nth-child(1) > div{
+        transform: rotate(45deg);
+        left: 3%;
+    }
+    &:hover > div::after{
         transform: rotate(45deg);
 		border-color: orange;
 		height: 120%;
-}
-main > div#promocao > div.produtosCarrossel > div.promocaoButtons:hover > div::before{
+    }
+    &:hover > div::before{
         border-color: orange;
 		transform: scale(.8);
+    }
 }
 
 main div#banners {

@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react"
-import Globais from '../globais'
 import "./home.css"
 
 import banner1 from "../../images/banners/banner 11.webp"
@@ -11,14 +10,7 @@ import banner5 from "../../images/banners/banner 8.webp"
 import Receba from "./receba"
 
 function Home(){
-    const [pc, setPc] = useState()
-    const [banner, setBanner] = useState()
-
-    const sbanner1 = banner1;
-    const sbanner2 = banner2;
-    const sbanner3 = banner3;
-    const sbanner4 = banner4;
-    const sbanner5 = banner5;
+    const banners = [banner1, banner2, banner3, banner4, banner5];
 
     const [autoBanner, setAutoBanner] = useState(0);
 
@@ -32,12 +24,6 @@ function Home(){
                     'https://i.pinimg.com/originals/d8/6f/da/d86fda77c35f943bd96b6d43a0a46844.png',
                     'https://www.covylsa.com/WebRoot/StoreES/Shops/ea2537/5616/389A/078A/A657/F3B1/52DF/D07D/DB62/heinken_lata_ml.png'
 ]
-
-    
-    useEffect(()=>{
-        setBanner(Globais.banner)
-        setPc(Globais.pc)
-    })
     function carrosselFun(e){
         return e?.map((et,posi)=>{
             return (
@@ -45,7 +31,7 @@ function Home(){
                     <div className='promocaoProdutosCarrossel2'>
                         <img
                           className="imgCarrossel"
-                            src={images[posi]}                      
+                            src={e[posi]}                      
                       >
                             
                         </img>
@@ -56,11 +42,11 @@ function Home(){
     function bannerFun(e){
         return e?.map((et,posi)=>{
             return (
-                <div className='banners' id={`banner${banner[posi]}`}>
+                <div className='banners' id={`banner${posi}`}>
                     <div className='conteinerImageBanner'>
                         <img
                            
-                            src={eval(`sbanner${et}`)}
+                            src={banners[posi]}
                         >
                         </img>
                     </div>
@@ -105,10 +91,10 @@ function Home(){
         <>
             <div id='banners'>
                 <div onClick={()=>carrosselMoveRight(0)} className="botoesBanner" id="botaoBanner1">
-                    <div  ></div>
+                    <div></div>
                 </div>
                 <div id="allBanners">
-                    {bannerFun(banner)}
+                    {bannerFun(banners)}
                 </div>
                 <div onClick={()=>carrosselMoveLeft(0)} className="botoesBanner" id="botaoBanner2">
                     <div ></div>
@@ -121,7 +107,7 @@ function Home(){
                             <div></div>
                         </div>
                         <div id='carrosselFun'>
-                            {carrosselFun(pc)}
+                            {carrosselFun(images)}
                         </div>
                         <div onClick={()=>carrosselMoveLeft(1)} className='promocaoButtons' id='promocaoButtonLeft'>
                             <div></div>
