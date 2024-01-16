@@ -2,16 +2,16 @@ import './receba.css'
 function Receba(){
     return (
         <div id='receba'>
-            <div id='imgReceba'>
+            <div className='boxsReceba' id='imgReceba'>
                 
             </div>
-            <div id='formReceba'>
+            <div id='formReceba' className='boxsReceba'>
                 <div className='text'>
                     <h1>
                         Receba nossas novidades
                     </h1>
                     <p>
-                        cadastre-se e ganhe descontos nas primeiras compras!
+                        Cadastre-se e ganhe descontos nas primeiras compras!
                     </p>
                 </div>
                 <div id='form'>
@@ -31,7 +31,7 @@ function Receba(){
                 </div>
                 <div className='text'>
                     <p>
-                        Ao inserir meus dados, estou de acordo com os <span>termos e condições</span> e <span>política de privacidade</span> Conheça também
+                        Ao inserir meus dados, estou de acordo com os <span>termos e condições</span> e <span>política de privacidade</span>
                     </p>
                 </div>
             </div>
